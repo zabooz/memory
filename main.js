@@ -6,10 +6,9 @@ const endlessMode = document.querySelector('#endless')
 const birdArr = []
 
 let pairArr = []
-
+console.log('ontouchstart' in window)
 
 for (let i = 0; i <= 15; i++) {
-    
     const bird = new Bird(i)
     birdArr.push(bird);
 }
