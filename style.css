@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+main{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem 1fr; 
+}
+.setup{
+    grid-area: 1/1/2/2;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.gameField{
+    grid: 2/1/3/2;
+    display: grid;
+    padding: 1rem;
+    background-color: yellow;
+    gap: 1rem;
+    justify-items: center;
+    align-items: center;
+}
+
+.card{
+    width:7rem;
+    height: 10rem;
+    background-image: url(./img/cardBack.jpeg);
+    background-position: center;
+}
+.card:hover{
+    cursor: pointer;
+}
+.animation{
+    animation: animation 2s forwards;
+}
+@keyframes animation{
+    0%{opacity:1}
+    100%{opacity:0;visibility: hidden;}
+}
